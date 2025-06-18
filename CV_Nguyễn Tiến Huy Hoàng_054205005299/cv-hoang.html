@@ -2,60 +2,200 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8" />
-  <title>CV - Nguyễn Tiến Huy Hoàng</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="cv-hoang.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Nguyễn Tiến Huy Hoàng</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
 
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+    .blinking {
+      animation: blink 1.5s infinite;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .fade-in {
+      animation: fadeIn 0.3s ease-out;
+    }
+
+    @keyframes glow {
+      0% { box-shadow: 0 0 10px #fff, 0 0 20px #8e2de2, 0 0 30px #4a00e0; }
+      50% { box-shadow: 0 0 20px #fff, 0 0 40px #8e2de2, 0 0 60px #4a00e0; }
+      100% { box-shadow: 0 0 10px #fff, 0 0 20px #8e2de2, 0 0 30px #4a00e0; }
+    }
+    @keyframes backgroundShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    @keyframes blinkCaret {
+      from, to { border-color: transparent; }
+      50% { border-color: white; }
+    }
+    .animate-background {
+      background-size: 200% 200%;
+      animation: backgroundShift 10s ease infinite;
+    }
+    .neon-avatar {
+      animation: glow 2s infinite alternate, blink 1.5s infinite;
+    }
+    .typing-text {
+      border-right: 2px solid #fff;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 4s steps(30, end) forwards, blinkCaret 0.75s step-end infinite;
+    }
+
+    .snowflake {
+      position: absolute;
+      top: -10px;
+      color: #fff;
+      opacity: 0.8;
+      animation: fall linear infinite;
+      animation-duration: 5s;
+      pointer-events: none;
+    }
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+    }
+    .snowflake::before {
+      content: '❄';
+    }
+  </style>
 </head>
-<body>
-  <div class="cv-container">
-    <div class="left-panel">
-      <img src="hoang.jpg" alt="Nguyễn Tiến Huy Hoàng" />
-      <h2>Nguyễn Tiến Huy Hoàng</h2>
-      <p>Sinh viên Hệ thống Thông tin</p>
+<body class="bg-gray-50 text-gray-800">
 
-      <div class="section-title">Thông tin liên hệ</div>
-      <ul>
-        <li>📞 0703 740 864 </li>
-        <li>📧 digi.huyhoang2612@gmail.com</li>
-        <li>📍 TP. Hồ Chí Minh</li>
-      </ul>
-
-      <div class="section-title">Kỹ năng</div>
-      <ul>
-        <li>Lập trình Python, HTML, CSS</li>
-        <li>Giao tiếp và làm việc nhóm</li>
-        <li>Phân tích dữ liệu</li>
-        <li>Quản lý thời gian</li>
-        <li>Sử dụng GitHub, Canva</li>
-      </ul>
-    </div>
-
-    <div class="right-panel">
-      <div class="section-title">Giới thiệu bản thân</div>
-      <p>
-        Tôi là sinh viên năm 2 chuyên ngành Hệ thống Thông tin tại Đại học Giao thông Vận tải TP.HCM, với niềm đam mê công nghệ và mong muốn phát triển trong lĩnh vực phát triển phần mềm và phân tích hệ thống. Tôi luôn nỗ lực học hỏi, rèn luyện kỹ năng và chủ động tham gia các dự án thực tế để tích lũy kinh nghiệm.
-      </p>
-
-      <div class="section-title">Học vấn</div>
-      <p><strong>Đại học Giao thông Vận tải TP.HCM</strong><br />
-      Hệ thống Thông tin | 2023 - 2027 <br />
-      GPA: 3.2/4.0</p>
-
-      <div class="section-title">Chứng chỉ</div>
-      <ul>
-        <li>Chứng chỉ MOS </li>
-        <li>Chứng chỉ lập trình Python cơ bản</li>
-      </ul>
-
-      <div class="section-title">Kinh nghiệm</div>
-      <ul>
-        <li>Tham gia dự án xây dựng trang web Digital CV nhóm</li>
-        <li>Thiết kế giao diện và phối hợp phát triển nội dung nhóm</li>
-        <li>Tham gia các hoạt động nhóm, thuyết trình</li>
-      </ul>
-    </div>
+  <!-- MÀN HÌNH CHỜ -->
+ <div id="introScreen" class="fixed inset-0 bg-gradient-to-r from-indigo-700 via-purple-600 to-pink-500 animate-background flex flex-col items-center justify-center text-white z-50 overflow-hidden">
+    <div id="snowContainer" class="absolute inset-0 pointer-events-none z-0"></div>
+    <img src="hoang.jpg" class="w-36 h-36 object-cover rounded-full border-4 border-white shadow-xl neon-avatar cursor-pointer transition hover:scale-110 z-10" alt="Nhấn để bắt đầu" onclick="enterSite()">
+    <p class="mt-6 text-lg font-semibold blinking z-10 text-center">Nhấp vào ảnh để vào Profile</p>
   </div>
+
+  <!-- TRANG CHÍNH -->
+  <div id="mainContent" class="hidden fade-in">
+    <header class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-10 relative">
+      <div class="container mx-auto text-center">
+        <img src="hoang.jpg" class="mx-auto w-32 h-32 object-cover rounded-full border-4 border-white shadow-lg mb-4 transition hover:scale-105 hover:shadow-2xl cursor-pointer" alt="Avatar" title="Nhấn để xem giới thiệu" onclick="toggleModal(true)">
+        <h1 class="text-3xl font-bold">Nguyễn Tiến Huy Hoàng</h1>
+        <p class="text-lg mt-2">Frontend Developer</p>
+      </div>
+      <div id="introModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-white text-gray-800 rounded-lg w-11/12 md:w-1/2 p-6 relative fade-in">
+          <button onclick="toggleModal(false)" class="absolute top-3 right-4 text-gray-500 hover:text-red-500 text-2xl font-bold">&times;</button>
+          <h2 class="text-2xl font-semibold mb-4">👋 Giới thiệu nhanh</h2>
+          <p>Xin chào! Mình là <strong>Nguyễn Tiến Huy Hoàng</strong>, một sinh viên yêu thích công nghệ, đam mê phát triển web và sáng tạo sản phẩm hữu ích. Mục tiêu của mình là trở thành một Frontend Developer chuyên nghiệp.</p>
+        </div>
+      </div>
+    </header>
+
+    <nav class="bg-white shadow sticky top-0 z-40">
+      <div class="container mx-auto flex justify-center gap-6 py-4 font-medium">
+        <a href="#info" class="hover:text-indigo-600 transition">Thông tin</a>
+        <a href="#career" class="hover:text-indigo-600 transition">Nghề nghiệp</a>
+        <a href="#skills" class="hover:text-indigo-600 transition">Kỹ năng</a>
+        <a href="#projects" class="hover:text-indigo-600 transition">Dự án</a>
+        <a href="#contact" class="hover:text-indigo-600 transition">Liên hệ</a>
+      </div>
+    </nav>
+
+    <main class="container mx-auto p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <section id="info" class="bg-white p-6 rounded-xl shadow">
+        <h2 class="text-xl font-semibold mb-2">🧍 Thông tin cá nhân</h2>
+        <ul class="list-disc ml-5 text-gray-700">
+          <li>Ngày sinh: 26/12/2005</li>
+          <li>Giới tính: Nam</li>
+          <li>Địa chỉ: TP.HCM</li>
+          <li>Email: digi.huyhoang2612@gmail.com</li>
+        </ul>
+      </section>
+
+      <section id="career" class="bg-white p-6 rounded-xl shadow">
+        <h2 class="text-xl font-semibold mb-2">🎯 Mục tiêu nghề nghiệp</h2>
+        <p>Tôi muốn trở thành một lập trình viên có tư duy sản phẩm, làm chủ công nghệ Frontend, góp phần tạo ra những sản phẩm web ấn tượng và tiện ích.</p>
+      </section>
+
+      <section class="bg-white p-6 rounded-xl shadow">
+        <h2 class="text-xl font-semibold mb-2">💡 Sở thích</h2>
+        <p>Lập trình, thiết kế UI, đọc sách công nghệ, chơi game sáng tạo như Minecraft, nghe nhạc lo-fi.</p>
+      </section>
+
+      <section id="skills" class="bg-white p-6 rounded-xl shadow">
+        <h2 class="text-xl font-semibold mb-2">🛠️ Kỹ năng & Ngôn ngữ</h2>
+        <ul class="list-disc ml-5">
+          <li>HTML, CSS, JavaScript</li>
+          <li>ReactJS, TailwindCSS</li>
+          <li>Git, GitHub</li>
+          <li>Tiếng Anh: Giao tiếp cơ bản</li>
+        </ul>
+      </section>
+
+      <section id="certs" class="bg-white p-6 rounded-xl shadow">
+        <h2 class="text-xl font-semibold mb-2">🏆 Chứng chỉ - Giải thưởng</h2>
+        <p>Toeic 600.</p>
+      </section>
+
+      <section id="projects" class="bg-white p-6 rounded-xl shadow">
+        <h2 class="text-xl font-semibold mb-2">💼 Dự án</h2>
+        <ul class="list-disc ml-5">
+          <li>CV Online cá nhân - HTML/CSS + Tailwind</li>
+          <li>Todo App - JavaScript thuần</li>
+        </ul>
+      </section>
+
+      <section id="contact" class="bg-white p-6 rounded-xl shadow col-span-full">
+  <h2 class="text-xl font-semibold mb-2">📬 Liên hệ</h2>
+  <ul>
+    <li>GitHub: <a href="https://github.com/huyhoang261205" class="text-indigo-600 hover:underline" target="_blank">huyhoang261205</a></li>
+    <li>Facebook: <a href="https://www.facebook.com/huyhoang2612/" class="text-indigo-600 hover:underline" target="_blank">huyhoang2612</a></li>
+    <li>Instagram: <a href="https://www.instagram.com/rio_ntwhoang/" class="text-indigo-600 hover:underline" target="_blank">rio_ntwhoang</a></li>
+  </ul>
+</section>
+
+    </main>
+
+    <footer class="text-center text-sm text-gray-500 py-4 mt-10">
+      © 2025 Nguyễn Tiến Huy Hoàng - All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    function toggleModal(show) {
+      document.getElementById('introModal').classList.toggle('hidden', !show);
+    }
+
+    function enterSite() {
+      document.getElementById('introScreen').style.display = 'none';
+      document.getElementById('mainContent').classList.remove('hidden');
+    }
+
+    // HIỆU ỨNG TUYẾT RƠI
+    const snowContainer = document.getElementById('snowContainer');
+    const snowflakeCount = 50;
+    for (let i = 0; i < snowflakeCount; i++) {
+      const snowflake = document.createElement('div');
+      snowflake.classList.add('snowflake');
+      snowflake.style.left = `${Math.random() * 100}%`;
+      snowflake.style.animationDelay = `${Math.random() * 5}s`;
+      snowflake.style.fontSize = `${Math.random() * 12 + 10}px`;
+      snowContainer.appendChild(snowflake);
+    }
+  </script>
 </body>
 </html>
