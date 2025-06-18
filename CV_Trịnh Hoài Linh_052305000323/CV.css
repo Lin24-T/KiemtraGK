@@ -495,7 +495,7 @@ nav a:hover::after {
   background: rgba(255, 255, 255, 0.08);
 }
 .certificates {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 80px auto;
   padding: 40px;
   background: rgba(255, 255, 255, 0.05); /* giống about */
@@ -530,7 +530,7 @@ nav a:hover::after {
   text-align: center;
 }
 .projects {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 80px auto;
   padding: 40px;
   background: rgba(255, 255, 255, 0.05); /* giống about */
