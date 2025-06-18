@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CV Nguyễn Đỗ Ái Linh</title>
+
+  <!-- Font & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <style>
+    :root {
+      --main-color: #800000;
+      --text-color: #333;
+      --bg-light: #f8f8f8;
+      --section-padding: 60px 20px;
+    }
+
+    /* Hình nền tĩnh */
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('background.jpg') no-repeat center center;
+  background-size: cover;
+  z-index: -2;
+}
+
+/* Lớp particles ở trên hình nền */
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* Nội dung chính nằm trên hết */
+.main-content {
+  position: relative;
+  z-index: 1;
+  padding: 40px;
+  color: white; /* hoặc đổi tùy theo nền */
+}
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg-light);
+      color: var(--text-color);
+    }
+
+    a {
+      color: var(--main-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* NAVBAR */
+    nav {
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      font-weight: bold;
+      font-size: 25px;
+      color: var(--main-color);
+    }
+
+    nav ul {
+      display: flex;
+      letter-spacing: 2px;
+      gap: 20px;
+      list-style: none;
+    }
+
+    nav ul li a {
+      color: #000;
+      font-weight: 500;
+
+    }
+
+    /* BANNER */
+    header {
+     
+  background: linear-gradient(to right, #800000aa, #00000077),
+    url('banner.jpg') center/cover no-repeat;
+
+      color: white;
+      text-align: left;
+      padding: 120px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header .intro {
+      max-width: 600px;
+      animation: slideIn 1s ease-out;
+    }
+
+    header .intro h1 {
+      font-size: 45px;
+      font-weight: bold;
+      color: #ffcccc;
+    }
+
+    header .intro h2 {
+      color: #ffffff;
+      margin: 10px 0;
+      font-size: 24px;
+    }
+
+    header .intro p {
+      font-size: 18px;
+    }
+
+    header .photo img {
+      width: 400px;
+      height: auto;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(-30px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    /* SECTIONS */
+    section {
+      padding: var(--section-padding);
+      max-width: 1000px;
+      margin: auto;
+    }
+    section img {
+      width: 250px;
+      height: auto;
+      border-radius: 20px;
+      padding: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    h2 {
+    
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: var(--main-color);
+      border-left: 5px solid var(--main-color);
+      padding-left: 10px;
+    }
+
+.about-container {
+  display: flex;
+  align-items: center; /* Căn giữa theo chiều dọc */
+  gap: 30px; /* Khoảng cách giữa ảnh và chữ */
+  padding: 20px;
+}
+
+.about-text {
+  max-width: 600px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+
+    .card, .card2 {
+  background: white;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 5px solid var(--main-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.card:hover,
+.card2:hover {
+  transform: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* giữ nguyên khi hover */
+  background-color: #fae6ea
+}
+
+.card h3,
+.card2 h3 {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+
+.icon {
+  background-color: #831010;      /* màu nền xanh */
+  color: white;                   /* màu icon */
+  width: 50px;                    /* chiều rộng hình tròn */
+  height: 50px;                   /* chiều cao hình tròn */
+  border-radius: 50%;            /* bo tròn hoàn toàn */
+  display: flex;                 /* căn giữa icon */
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;               /* kích thước icon */
+  margin: 0 auto 10px auto;      /* căn giữa theo chiều ngang */
+}
+
+.goal-box {
+  background: #f9f9f9;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+.goal-box strong {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.goal-box p {
+  font-size: 14px;
+  text-align: center;
+}
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .grid-2 {
+      font-size: 18px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .skills-section {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 60px 20px;
+  
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.skills-content h2{
+  align-items: left;
+  max-width: 800px;
+  color: #830f0f;
+}
+
+.sub-title {
+  color: #b11515;
+  font-size: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #080505;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.description {
+  max-width: 600px;
+  margin: 20px auto;
+  color: #0e0303;
+}
+
+.project-btn {
+  background: linear-gradient(to center, #ffe5ec, #ffd6e0);
+  color: rgb(170, 26, 26);
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.project-btn:hover {
+  background: linear-gradient(to center, #ffccd5, #c91e40);
+  
+}
+
+.skills-icons {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.skill-item {
+  background: #eee7e7;
+  border-radius: 20px;
+  padding: 5px;
+  position: relative;
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.skill-item img {
+  width: 120px;
+  height: 120px;
+  display: block;
+}
+.skill-item .label {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ff884d;
+  color: white;
+  font-size: 18px;
+  padding: 2px 8px;
+  border-radius: 8px;
+}
+
+.skill-item:hover {
+  transform: scale(1.1);
+  box-shadow: 6px 6px 12px rgba(255,255,255,0.1);
+}
+.button-group {
+  display: inline-flex;
+  background: linear-gradient(to right, rgb(255, 242, 253), rgb(214, 41, 41));
+  border-radius: 30px;
+  padding: 4px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button-group button {
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  background: none;
+  border-radius: 30px;
+  font-weight: bold;
+  color: white;
+  transition: all 0.3s;
+}
+
+.button-group .active {
+  background: linear-gradient(to right, rgb(205, 211, 245), rgb(255, 240, 240));
+  color: #f66;
+}
+
+.icons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.icons {
+  width: 80px;
+  height: 80px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icons:hover {
+  transform: scale(1.15);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.icons img {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.icons:hover img {
+  transform: scale(1.1);
+}
+
+.toggle-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 30px;
+  background: linear-gradient(to right, #ffc4c4, #bd4040);
+  padding: 8px;
+  align-items: center;
+  border-radius: 30px;
+}
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 40px;
+}
+
+.card3 {
+  background-color: white;
+  border-left: 5px solid #800000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 45%;
+  aspect-ratio: 1 / 1; /* Làm ô hình vuông */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.card3 {
+  background-color: white;
+  transition: background-color 0.3s ease;
+}
+
+.card3:hover {
+  background-color: #faecef; /* Màu nền khi hover */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Tăng độ đổ bóng khi hover */
+}
+
+.card button {
+  background-color: #921515; /* Màu nền đỏ */
+  color: rgb(255, 255, 255);              /* Chữ trắng */
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card button i {
+  font-size: 16px;
+}
+
+/* Hover effect */
+.card button:hover {
+  background-color: #ffffff;
+  color: #921515; /* Chữ đỏ khi hover */
+}
+
+
+    footer {
+      background: var(--main-color);
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    footer a {
+      color: rgb(255, 255, 255);
+    }
+
+    footer .social-icons a {
+      margin: 0 10px;
+      font-size: 24px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <body>
+  <div class="background-image"></div>
+  <div id="particles-js"></div>
+
+  <!-- Thêm script particles.js -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS('particles-js', {
+      "particles": {
+        "number": { "value": 80 },
+        "size": { "value": 3 },
+        "move": { "speed": 2 },
+        "line_linked": { "enable": true },
+        "color": { "value": "#ffffff" }
+      }
+    });
+  </script>
+</body>
+
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">CV Digital</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#career">Career</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#hobbies">Hobbies</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#archievement">Achievements</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- BANNER -->
+  <header>
+    <div class="intro" data-aos="fade-right">
+      <p>Hello!</p>
+        <h1>I'm NGUYỄN ĐỖ ÁI LINH</h1>
+      <h2>Sophomore</h2>
+      <h2>Business Analyst</h2>
+      <h2>From Ho Chi Minh City</h2>
+      
+    </div>
+    <div class="photo" data-aos="fade-left">
+      <img src="img.jpg" alt="Ảnh cá nhân" />
+    </div>
+  </header>
+
+  <!-- GIỚI THIỆU -->
+  <section id="about" data-aos="fade-up">
+  <h2>About</h2>
+
+  <div class="about-container">
+    <div class="photo" data-aos="fade-left">
+      <img src="img2.jpg" alt="Ảnh cá nhân" />
+    </div>
+
+    <div class="about-text">
+      Hello MIS Company,<br/>
+      My name is Nguyễn Đỗ Ái Linh, a second-year student majoring in Management Information Systems. I have over a year of experience as an English teaching assistant for elementary and middle school students. This role has helped me develop strong communication, organization, and classroom support skills.
+
+With a background in MIS, I bring logical thinking and adaptability to my work. I’m passionate about education and eager to contribute to a positive, engaging learning environment at your center.
+</div>
+</section>
+
+
+  <!-- NGHỀ NHIỆP -->
+  <section id="career" data-aos="fade-up">
+  <h2>Career</h2>
+
+  <div class="card">
+    <div class="icon"><ion-icon name="school-outline"></ion-icon></div> <!-- icon mũ tốt nghiệp -->
+    
+    <h3>EDUCATION</h3>
+    <div class="goal-box">
+    <p>Ho Chi Minh City University of Transport</p>
+    <p>Major in Management Information Systems</p>
+    </div>
+  </div>
+
+  <div class="card2">
+    <div class="icon"><ion-icon name="checkmark-done-outline"></ion-icon></div> <!-- icon định hướng -->
+    <h3>CAREER GOALS</h3>
+    <div class="goal-box">
+      <strong>Short-term goal</strong>
+      <p>Build a strong foundation in specialized knowledge and apply it to practical projects to prepare for internship opportunities in the field of data analysis.</p>
+    </div>
+
+    <div class="goal-box">
+      <strong>Long-term goal</strong>
+      <p>To become a professional Data Analyst with strong analytical skills and grow into roles like Senior Data Analyst or Data Scientist.</p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- KỸ NĂNG -->
+  <section id="skills" data-aos="fade-up">
+  <div class="skills-section">
+  <div class="skills-content">
+    <h2 class="sub-title">Skills</h2>
+    <div class="card2">
+    <div class="goal-box">
+    <h3 class="title">MASTERED</h3>
+    <p class="description">
+      These are the technologies I have used throughout my studies and project implementations.
+      With these technologies, I create user-friendly and understandable interfaces, helping users to operate quickly,
+      effectively and without hassle.
+    </p>
+    </div>
+  </div>
+    <button class="project-btn">SOME SOFTWARE</button>
+  </div>
+  
+
+  <div class="button-group">
+    <button id="btn-skills" class="active">Skills</button>
+    <button id="btn-tools">Tools</button>
+  </div>
+
+  <div id="skills-icons" class="icons-container">
+    <div class="icons"><img src="images/html.png" alt="HTML"></div>
+    <div class="icons"><img src="images/css.png" alt="CSS"></div>
+    <div class="icons"><img src="images/js.png" alt="JavaScript"></div>
+    <div class="icons"><img src="images/python.png" alt="Python"></div>
+    <div class="icons"><img src="images/cpp.png" alt="C++"></div>
+    <div class="icons"><img src="images/sql.png" alt="SQL"></div>
+  </div>
+
+  <div id="tools-icons" class="icons-container" style="display: none;">
+    <div class="icons"><img src="images/photoshop.png" alt="Photoshop"></div>
+    <div class="icons"><img src="images/canva.png" alt="Canva"></div>
+    <div class="icons"><img src="images/figma.png" alt="Figma"></div>
+    <div class="icons"><img src="images/vscode.png" alt="VSCode"></div>
+    <div class="icons"><img src="images/github.png" alt="GitHub"></div>
+    <div class="icons"><img src="images/x.png" alt="XTool"></div>
+  </div>
+</section>
+
+
+
+  <!-- DỰ ÁN -->
+  <section id="projects" data-aos="fade-up">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="card3">
+        
+      <img src="images/cv.png" alt="CV Website" />
+      <strong>Personal CV Website</strong><br/>
+      Designed with HTML & CSS, smooth scrolling effects using AOS library.
+    </div>
+    <div class="card3">
+      <img src="images/img2.png" alt="Student Management App" />
+      <strong>Student Management App</strong><br/>
+      Written in Python – allows entering grades, calculating GPA, exporting to Excel.
+    </div>
+    <div class="card3">
+      <img src="images/img3.png" alt="Flappy Bird Game" />
+      <strong>Flappy Bird Game</strong><br/>
+      Simulated Flappy Bird game using Pygame library.
+    </div>
+    <div class="card3">
+      <img src="images/img4.png" alt="Shopee Sales Page" />
+      <strong>Shopee Sales Page</strong><br/>
+      Manage products, orders, and customer feedback.
+    </div>
+    </div>
+  </section>
+
+  <!-- SỞ THÍCH -->
+  <section id="hobbies" data-aos="fade-up">
+    <h2>Hobbies</h2>
+    <div class="grid-2">
+      <div class="card">📚 Read book</div>
+      <div class="card">✈️ Travel</div>
+      <div class="card">🎥 Make video</div>
+      <div class="card">🎶 Listen to music</div>
+      <div class="card">🎮 Play game</div>
+      <div class="card">🍳 Cook</div>
+    </div>
+  </section>
+
+  <!-- KINH NGHIỆM -->
+  <section id="experience" data-aos="fade-up">
+    <h2>Experience</h2>
+    <div class="card">
+      <strong>ITech Company</strong> (04/2025 - 06/2025)<br />
+      Tester – Test the software to make sure it works properly and is error free..
+    </div>
+    <div class="card">
+      <strong>Ngoc Thao Junior</strong> (08/2024 - 04/2025)<br />
+      Teaching assistant for children's English classes – supporting teaching and classroom management.
+    </div>
+    <div class="card">
+      <strong>Embassy Language</strong> (07/2023 - 09/2023)<br />
+      Teaching assistant – supporting teachers and assessing students' learning progress.
+    </div>
+    <div class="card">
+      <strong>Que Minh Shop</strong> (09/2022)<br />
+      Sales staff – improving communication skills and customer service.
+    </div>
+  </section>
+
+  <section id="archievement" data-aos="fade-up">
+    <h2 data-aos="zoom-in">Certificates & Awards</h2>
+    <div class="card-container">
+      <div class="card" data-aos="fade-up">
+        <div class="icon"><i class="fas fa-certificate"><ion-icon name="medical-outline"></ion-icon></i></div>
+        <h3>Data Analytics Certificate</h3>
+        <p>Complete a course on Coursera by 2024 using tools like Excel, Tableau, and effective communication with stakeholders.</p>
+        <button onclick="window.open('http://127.0.0.1:5500/certificate1.html','_blank')">
+          <i class="fas fa-eye"></i> View Certificate
+        </button>
+      </div>
+
+      <div class="card" data-aos="fade-up" data-aos-delay="100">
+        <div class="icon"><i class="fas fa-award"><ion-icon name="medical-outline"></ion-icon></i></div>
+        <h3>Google AI Essentials</h3>
+        <p>Completed in 2024. Learned AI, ML, security, content creation and more. Powered by Google via Coursera.</p>
+        <button onclick="window.open('http://127.0.0.1:5500/certificate.html','_blank')">
+          <i class="fas fa-eye"></i> View Certificate
+        </button>
+      </div>
+    </div>
+  </section>
+
+    <!-- LIÊN HỆ -->
+  <section id="contact" data-aos="fade-up">
+    <h2>Contact</h2>
+    <div class="card">
+      <p><ion-icon name="call-outline"></ion-icon> <a href="tel:0901311783">0901311783</a></p>
+      <p><ion-icon name="send-outline"></ion-icon> <a href="https://zalo.me/" target="_blank">Zalo</a></p>
+      <p><ion-icon name="mail-outline"></ion-icon> <a href="mailto:ailind.91ig@gmail.com">ailind.91ig@gmail.com</a></p>
+      <p><ion-icon name="logo-facebook"></ion-icon><a href="https://www.facebook.com/ailind.hihii/" target="_blank"> Nguyễn Đỗ Ái Linh</a></p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer data-aos="fade-up">
+    <p>&copy; 2025 Nguyễn Đỗ Ái Linh - Digital CV</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/ailind.hihii/"><ion-icon name="logo-facebook"></ion-icon></a>
+      <a href="mailto:ailind.91ig@gmail.com"><ion-icon name="mail-outline"></ion-icon></a>
+      <a href="#"><ion-icon name="logo-github"></ion-icon></a>
+    </div>
+  </footer>
+
+  <script>
+    const btnSkills = document.getElementById("btn-skills");
+    const btnTools = document.getElementById("btn-tools");
+    const skillsIcons = document.getElementById("skills-icons");
+    const toolsIcons = document.getElementById("tools-icons");
+
+    btnSkills.addEventListener("click", () => {
+      skillsIcons.style.display = "flex";
+      toolsIcons.style.display = "none";
+      btnSkills.classList.add("active");
+      btnTools.classList.remove("active");
+    });
+
+    btnTools.addEventListener("click", () => {
+      skillsIcons.style.display = "none";
+      toolsIcons.style.display = "flex";
+      btnTools.classList.add("active");
+      btnSkills.classList.remove("active");
+    });
+  </script>
+
+  <!-- Animation Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ duration: 1000 });</script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+</body>
+</html>
