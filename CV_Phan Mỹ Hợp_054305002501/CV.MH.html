@@ -2,55 +2,157 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CV - Phan Mỹ Hợp</title>
-  <link rel="stylesheet" href="CV.MH.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV Cá Nhân</title>
+  <!--CSS chính-->
+  <link rel="stylesheet" href="cv cá nhân.css" />
+  <!--Icon font-awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-  <div class="cv-container">
-    <aside class="left-column">
-      <div class="avatar">
-        <img src="cvv.jpg"="ảnh cá nhân" />
+  <!--Giới thiệu đầu trang-->
+  <section id="intro" onclick="startCV()">
+    <div class="intro-content">
+      <img src="cvv.jpg" alt="Ảnh cá nhân" class="avatar" />
+      <h1>CV-Phan Mỹ Hợp</h1>
+    </div>
+  </section> 
+
+  <!--Thanh điều hướng-->
+  <nav id="mainNav">
+    <ul>
+      <li><a href="#" onclick="showSection('info')"><i class="fa-solid fa-user"></i> Thông tin</a></li>
+      <li><a href="#" onclick="showSection('education')"><i class="fa-solid fa-graduation-cap"></i> Trình độ</a></li>
+      <li><a href="#" onclick="showSection('target')"><i class="fa-solid fa-bullseye"></i> Mục tiêu</a></li>
+      <li><a href="#" onclick="showSection('skills')"><i class="fa-solid fa-laptop-code"></i> Kỹ năng</a></li>
+      <li><a href="#" onclick="showSection('language')"><i class="fa-solid fa-language"></i> Ngôn ngữ</a></li>
+      <li><a href="#" onclick="showSection('projects')"><i class="fa-solid fa-diagram-project"></i> Dự án</a></li>
+      <li><a href="#" onclick="showSection('interest')"><i class="fa-solid fa-heart"></i> Sở thích</a></li>
+      <li><a href="#" onclick="showSection('certificates')"><i class="fa-solid fa-certificate"></i> Chứng chỉ</a></li>
+      <li><a href="#" onclick="showSection('contact')"><i class="fa-solid fa-envelope"></i> Liên hệ</a></li>
+      <li><a href="#" onclick="goBackIntro()"><i class="fa-solid fa-arrow-left"></i> Quay lại</a></li>
+    </ul>
+  </nav>
+
+  <!--Thông tin cá nhân-->
+  <section id="info">
+    <div class="info-box">
+      <div>
+        <h2><i class="fa-solid fa-id-card"></i> Thông tin cá nhân</h2>
+        <p><strong><i class="fa-solid fa-cake-candles"></i> Ngày sinh:</strong> 26/05/2005</p>
+        <p><strong><i class="fa-solid fa-envelope"></i> Email:</strong> phanmyhopabc@gmail.com</p>
+        <p><strong><i class="fa-solid fa-phone"></i> Điện thoại:</strong> 0123 456 789</p>
+        <p><strong><i class="fa-solid fa-location-dot"></i> Địa chỉ:</strong> Quận 12, TP. Hồ Chí Minh</p>
       </div>
-      <h2>Phan Mỹ Hợp</h2>
-      
-      <div class="info">
-        <h3><i class="fas fa-user-circle"></i> Thông tin</h3>
-        <p><i class="fas fa-envelope"></i> phanhopabc@gmail.com</p>
-        <p><i class="fas fa-phone"></i> 0123 456 789</p>
-        <p><i class="fas fa-map-marker-alt"></i> Quận 12, Hồ Chí Minh</p>
-      </div>
+      <img src="cvv.jpg" alt="Ảnh cá nhân" class="avatar" />
+    </section>
+ 
+  <!--Trình độ học vấn-->
+  <section id="education">
+    <h2><i class="fa-solid fa-graduation-cap"></i> Trình độ học vấn</h2>
+    <p><strong>Trường:</strong> Đại học Giao Thông Vận Tải TP.HCM</p>
+    <p><strong>Ngành:</strong> Hệ thống thông tin quản lý</p>
+  </section>
 
-      <div class="skills">
-        <h3><i class="fas fa-laptop-code"></i> Kỹ năng</h3>
-        <ul>
-          <li>HTML / CSS /</li>
-          <li>Tư duy tốt</li>
-          <li>Tự học & cập nhật công nghệ</li>
-          <li>Khả năng làm việc nhóm và quản lý thời gian tốt</li>
-        </ul>
-      </div>
-    </aside>
+  <!--Mục tiêu nghề nghiệp-->
+  <section id="target">
+    <h2><i class="fa-solid fa-bullseye"></i> Mục tiêu nghề nghiệp</h2>
+    <p>Tôi định hướng phát triển trong lĩnh vực lập trình web, mong muốn trau dồi kỹ năng qua các dự án thực tế và trở thành lập trình viên chuyên nghiệp. Tôi luôn sẵn sàng học hỏi công nghệ mới và đóng góp tích cực vào công việc chung. Với mục tiêu bản thân đặt ra tôi hi vọng mình sẽ đem lại lợi ích doanh nghiệp, cống hiến hết mình đạt thành tựu tốt nhất.</p>
+  </section>
 
-    <main class="right-column">
-      <section class="profile">
-        <h2><i class="fas fa-user"></i> Giới thiệu bản thân</h2>
-        <p>Hiện tại tôi là sinh viên năm 2 học ngành hệ thống thông tin quản lý. Tôi luôn tìm kiếm cơ hội để học hỏi và mong muốn phát triển bản thân trong ngành công nghệ mới.
-      </section>
+  <!--Kỹ năng-->
+  <section id="skills">
+    <h2><i class="fa-solid fa-screwdriver-wrench"></i> Kỹ năng</h2>
+    <ul>
+      <li><i class="fa-brands fa-html5"></i> HTML/CSS</li>
+      <li><i class="fa-solid fa-comments"></i> Giao tiếp tốt</li>
+      <li><i class="fa-solid fa-brain"></i> Tư duy nhạy bén</li>
+      <li><i class="fa-solid fa-users"></i> Làm việc nhóm & quản lý thời gian</li>
+    </ul>
+  </section>
 
-      <section class="education">
-        <h2><i class="fas fa-graduation-cap"></i> Học vấn</h2>
-        <p><strong>Đại học Giao Thông Vận Tải tp.HCM</strong> - 2023 ~ 2025</p>
-        <p>Chuyên ngành: Hệ thống thông tin quản lý</p>
-      </section>
+  <!-- Ngôn ngữ -->
+  <section id="language">
+    <h2><i class="fa-solid fa-language"></i> Ngôn ngữ</h2>
+    <ul>
+      <li><i class="fa-solid fa-earth-asia"></i> Tiếng Việt (Bản ngữ)</li>
+      <li><i class="fa-solid fa-earth-americas"></i> Tiếng Anh (Trung bình)</li>
+    </ul>
+  </section>
 
-      <section class="experience">
-        <h2><i class="fas fa-briefcase"></i> Kinh nghiệm làm việc</h2>
-        <p><strong>Web Developer - Công ty ABC</strong>-2024</p>
-        <p><strong>Tham gia dự án phân tích nghiệp vụ tại công ty XY</strong>-2024</p>
-      </section>
-    </main>
-  </div>
+  <!--Dự án-->
+  <section id="projects">
+    <h2><i class="fa-solid fa-diagram-project"></i> Dự án</h2>
+    <div class="project">
+      <h3>Website Quản lý sinh viên</h3>
+      <p><i class="fa-solid fa-laptop-code"></i> Mô tả: Trang web cho phép thêm/sửa/xóa sinh viên, sử dụng HTML/CSS/JS</p>
+      <p><i class="fa-brands fa-github"></i> Link GitHub: <a href="#">github.com/quanlysinhvien</a></p>
+    </div>
+  </section>
+
+  <!--Sở thích-->
+  <section id="interest">
+    <h2><i class="fa-solid fa-heart"></i> Sở thích</h2>
+    <ul>
+      <li><i class="fa-solid fa-music"></i> Nghe nhạc</li>
+      <li><i class="fa-solid fa-camera"></i> Chụp ảnh</li>
+      <li><i class="fa-solid fa-film"></i> Xem phim</li>
+      <li><i class="fa-solid fa-dumbbell"></i> Thể thao</li>
+    </ul>
+  </section>
+
+  <!--Chứng chỉ- giải thưởng-->
+  <section id="certificates">
+    <h2><i class="fa-solid fa-certificate"></i> Chứng chỉ - Giải thưởng</h2>
+    <p><i class="fa-solid fa-medal"></i> <strong>Chứng chỉ:</strong> Tin học MOS</p>
+    <p><i class="fa-regular fa-star"></i> <strong>Giải thưởng:</strong> Không có</p>
+  </section>
+
+  <!--Liên hệ-->
+  <section id="contact">
+    <h2><i class="fa-solid fa-envelope"></i> Liên hệ</h2>
+    <p><i class="fa-brands fa-github"></i> GitHub: <a href="#">Github.com/mhop.05</a></p>
+    <p><i class="fa-brands fa-facebook"></i> Facebook: <a href="#">facebook.com/myhop</a></p>
+    <p><i class="fa-brands fa-instagram"></i> Instagram: <a href="#">instagram.com/myhop05</a></p>
+  </section>
+
+  <!--Footer-->
+  <footer>
+    <p>&copy; CV Digital - phanmyhop</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const sections = document.querySelectorAll('section');
+
+      //Ẩn intro, hiện nav và các section
+    window.showSection = function(id) {
+      sections.forEach(sec => sec.classList.remove('active'));
+      const el = document.getElementById(id);
+      if (el) el.classList.add('active');
+    }
+
+      //Quay lại màn hình giới thiệu
+      window.startCV = function() {
+        const intro = document.getElementById('intro');
+        const nav = document.getElementById('mainNav');
+        if (intro) intro.style.display = 'none';
+        if (nav) nav.style.display = 'block';
+        sections.forEach(sec => {
+          if (sec.id !== 'intro') sec.classList.add('active');
+        });
+      }
+
+      //Hiển thị section theo lựa chọn
+      window.goBackIntro = function() {
+        const intro = document.getElementById('intro');
+        const nav = document.getElementById('mainNav');
+        if (intro) intro.style.display = 'flex';
+        if (nav) nav.style.display = 'none';
+        sections.forEach(sec => sec.classList.remove('active'));
+      }
+
+    });  
+</script>
 </body>
 </html>
