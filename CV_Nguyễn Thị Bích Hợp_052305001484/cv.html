@@ -1,343 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
-    <title>CV Nguyễn Thị Bích Hợp</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-      crossorigin="anonymous"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV - Nguyễn Thị Bích Hợp</title>
     <link rel="stylesheet" href="cv.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header>
-      <a href="#" class="logo">Nguyễn Thị Bích Hợp</a>
-      <div class="toggle" onclick="toggleMenu();"></div>
-      <ul class="menu">
-        <li><a href="#home" onclick="toggleMenu();">Home</a></li>
-        <li><a href="#about" onclick="toggleMenu();">About</a></li>
-        <li><a href="#career" onclick="toggleMenu();">Career</a></li>
-        <li><a href="#interests" onclick="toggleMenu();">Interests</a></li>
-        <li><a href="#skills" onclick="toggleMenu();">Skills</a></li>
-        <li>
-          <a href="#certificates" onclick="toggleMenu();">Certificates</a>
-        </li>
-        <li><a href="#awards" onclick="toggleMenu();">Awards</a></li>
-        <li><a href="#projects" onclick="toggleMenu();">Projects</a></li>
-        <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
-      </ul>
+    <div class="banner">
+      <h1>Welcome to CV Nguyễn Thị Bích Hợp</h1>
+    </div>
+
+    <header class="navbar">
+      <nav>
+        <ul>
+          <li><a href="#about">Giới thiệu</a></li>
+          <li><a href="#career-goals">Mục tiêu</a></li>
+          <li><a href="#skills">Kỹ năng</a></li>
+          <li><a href="#hobbies">Sở thích</a></li>
+          <li><a href="#projects">Dự án</a></li>
+          <li><a href="#contact">Liên hệ</a></li>
+          <li><a href="#social">Mạng xã hội</a></li>
+          <li><a href="#certifications">Chứng chỉ</a></li>
+          <li><a href="#awards">Giải thưởng</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <section class="banner section-dark" id="home">
-        <div class="snow-container"></div>
-      <div class="textBx">
-        <h2>Hello, I'm <br /><span>Nguyễn Thị Bích Hợp</span></h2>
-        <h3>I'm a Bussiness Analyst</h3>
-        <p>
-          Welcome to my personal portfolio!
-        </p>
-        <a href="#about" class="btn">About Me</a>
-      </div>
-    </section>
+    <div class="container">
+      <aside class="profile">
+        <div class="avatar">
+          <img src="profile.jpg" alt="Avatar của Nguyễn Thị Bích Hợp" />
+        </div>
+        <div class="info">
+          <h2>Nguyễn Thị Bích Hợp</h2>
+          <p>Business Analyst</p>
+        </div>
 
-    <section class="about section - grey" id="about">
-      <div class="heading">
-        <h2>About For Me</h2>
-      </div>
-      <div class="content">
-        <div class="contentBx">
-          <h3>I'm a Business Analyst.</h3>
+        <section id="contact">
+          <h3>Thông tin liên hệ</h3>
+          <ul class="contact">
+            <li><i class="fas fa-phone-alt"></i> +84387369661</li>
+            <li><i class="fas fa-envelope"></i> hopntb1484@ut.edu.vn</li>
+            <li><i class="fas fa-map-marker-alt"></i> Quận 12, TP.HCM</li>
+          </ul>
+        </section>
+
+        <section id="social">
+          <h3>Mạng xã hội</h3>
+          <ul class="socials">
+            <li>
+              <a href="https://github.com/bichhop1095" target="_blank"
+                ><i class="fab fa-github"></i> GitHub</a
+              >
+            </li>
+            <li>
+              <a href="https://www.facebook.com/bicshopw.05" target="_blank"
+                ><i class="fab fa-facebook"></i> Facebook</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/hcib_poh?fbclid"
+                target="_blank"
+                ><i class="fab fa-instagram"></i> Instagram</a
+              >
+            </li>
+          </ul>
+        </section>
+      </aside>
+
+      <main class="content">
+        <section id="about">
+          <h2>Giới thiệu bản thân</h2>
           <p>
-            Em tên là Nguyễn Thị Bích Hợp (10/09/2005)
-            hiện tại là sinh viên năm 2 ngành Hệ thống Thông tin Quản lý
-            tại trường Đại học Giao Thông Vận Tải TP HCM. Em có niềm đam mê với tư duy
+            Em là sinh viên năm 2 ngành Hệ thống Thông tin Quản lý với tư duy
             phân tích logic và tinh thần học hỏi chủ động. Em có hứng thú đặc
             biệt với việc kết nối giữa công nghệ và nhu cầu kinh doanh, đặc biệt
             là trong việc khai thác dữ liệu để hỗ trợ ra quyết định. Em luôn tìm
             kiếm cơ hội để cọ xát thực tế và phát triển kỹ năng làm việc chuyên
             nghiệp.
           </p>
-            <p>
-                Em có khả năng giao tiếp tốt, làm việc nhóm hiệu quả và luôn sẵn sàng
-                học hỏi. Mục tiêu của em là trở thành một Business Analyst chuyên
-                nghiệp, đóng góp vào sự phát triển của doanh nghiệp thông qua việc
-                phân tích và tối ưu hóa quy trình làm việc.
-        </div>
-        <div class="w50">
-          <img src="tải xuống.png" class="img" />
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <section class="interests section-" id="interests">
-      <div class="heading">
-        <h2>My Interests</h2>
-        <p>Những sở thích giúp mình cân bằng cuộc sống.</p>
-      </div>
-      <div class="content">
-        <div class="featureBx">
-          <img src="1.jpg" alt="Travel" />
-          <h3>Traveling</h3>
-          <p>Khám phá văn hóa và con người ở những vùng đất mới.</p>
-          <button class="detail-btn" onclick="toggleDetail(this)">
-            Xem thêm
-          </button>
-          <div class="detail-content">
-            <p>
-              Mỗi chuyến đi là một cơ hội để học hỏi, giao lưu và thấu hiểu thế
-              giới từ góc nhìn khác. Từ những thành phố hiện đại đến vùng quê
-              yên bình, du lịch giúp mình nạp lại năng lượng.
-            </p>
-          </div>
-        </div>
-        <div class="featureBx">
-          <img src="2.jpg" alt="Reading" />
-          <h3>Reading</h3>
-          <p>Đọc sách về phân tích kinh doanh và phát triển cá nhân.</p>
-          <button class="detail-btn" onclick="toggleDetail(this)">
-            Xem thêm
-          </button>
-          <div class="detail-content">
-            <p>
-              Mình yêu thích các tác phẩm như “Atomic Habits”, “Thinking, Fast
-              and Slow”, hoặc sách phân tích case study. Nó giúp cải thiện tư
-              duy logic và giao tiếp trong nghề BA.
-            </p>
-          </div>
-        </div>
-        <div class="featureBx">
-          <img src="3.jpg" alt="Photography" />
-          <h3>Photography</h3>
-          <p>Lưu giữ những khoảnh khắc bình dị trong cuộc sống.</p>
-          <button class="detail-btn" onclick="toggleDetail(this)">
-            Xem thêm
-          </button>
-          <div class="detail-content">
-            <p>
-              Chụp ảnh không chỉ là sở thích mà còn giúp mình luyện mắt quan sát
-              – một kỹ năng quan trọng với Business Analyst.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="skills section-light" id="skills">
-      <div class="heading">
-        <h2>My Skills</h2>
-        <p>What I'm good at professionally.</p>
-      </div>
-      <div class="content">
-        <div class="featureBx">
-          <img src="tgian.png" alt="Analysis" />
-          <h3>Lập kế hoạch và quản lý thời gian</h3>
-          <p></p>
-        </div>
-        <div class="featureBx">
-          <img src="tool.png" alt="Data" />
-          <h3>Sử dụng công cụ hỗ trợ mô hình hóa nghiệp vụ</h3>
-        </div>
-        <div class="featureBx">
-          <img src="gtiep.jpg" alt="Agile" />
-          <h3>Kỹ năng giao tiếp và làm việc nhóm</h3>
-          <p></p>
-        </div>
-      </div>
-      <div class="languages">
-        <div class="languageBx">
-          <img src="est.jpg" />
-          <h4>English</h4>
-        </div>
-        <div class="languageBx">
-          <img src="hsk.jpg" />
-          <h4>Chinese</h4>
-        </div>
-      </div>
-    </section>
-
-    <section class="certificates section-dark" id="certificates">
-      <div class="heading">
-        <h2>Certificates</h2>
-        <p>Some of my most proud achievements in learning.</p>
-      </div>
-      <div class="content">
-        <div class="featureBx">
-          <img src="mos.jpg" alt="MOS" />
-          <h3>MOS</h3>
-        </div>
-        <div class="featureBx">
-          <img src="toeic.png" alt="TOEIC" />
-          <h3>TOEIC</h3>
-        </div>
-        <div class="featureBx">
-          <img src="design.jpeg" alt="Design" />
-          <h3>Design</h3>
-        </div>
-      </div>
-    </section>
-
-    <section class="awards section-light" id="awards">
-      <div class="heading">
-        <h2>My Awards</h2>
-        <p>Không có </p>
-      </div>
-    </section>
-
-    <section class="projects section-dark" id="projects">
-      <div class="heading">
-        <h2>My Projects</h2>
-      </div>
-        <div class="projects_cards">
-            <a
-            href="https://github.com/sissyMai/mtikcode-simple-portfolio"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-          <img src="project1.jpg" class="projects__cards_img" />
-          <div class="projects__cards_titles">
-            <h3>Dashboard bán hàng</h3>
-          </div>
-        </div>
-
-        <div class="projects_cards">
-          <img src="project2.jpg" class="projects__cards_img" />
-          <div class="projects__cards_titles">
-            <h3>Phân tích dữ liệu khách hàng</h3>
-          </div>
-        </div>
-
-        <div class="projects_cards">
-          <img src="project3.jpg" class="projects__cards_img" />
-          <div class="projects__cards_titles">
-            <h3>Thiết kế wireframe app</h3>
-          </div>
-        </div>
-
-        <div class="projects_cards">
-          <img src="project4.jpg" class="projects__cards_img" />
-          <div class="projects__cards_titles">
-            <h3>BI cho ngành bán lẻ</h3>
-          </div>
-        </div>
-
-        <div class="projects_cards">
-          <img src="project5.jpg" class="projects__cards_img" />
-          <div class="projects__cards_titles">
-            <h3>Hệ thống quản lý kho</h3>
-          </div>
-        </div>
-
-        <div class="projects_cards">
-          <img src="project.jpg" class="projects__cards_img" />
-          <div class="projects__cards_titles">
-            <h3>Ứng dụng nhập liệu</h3>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="career" id="career">
-      <div class="heading">
-        <h2>Thông tin về nghề nghiệp</h2>
-        <p>I'm a Business Analyst.</p>
-      </div>
-      <div class="careerBx">
-        <img src="banner.jpg" />
-        <div class="careerContent">
-          <h3>Business Analyst</h3>
+        <section id="career-goals">
+          <h2>Mục tiêu nghề nghiệp</h2>
           <p>
-            Là người kết nối giữa công nghệ và nhu cầu kinh doanh, giúp doanh
-            nghiệp tối ưu hóa quy trình và ra quyết định dựa trên dữ liệu.
+            Trong thời gian tới, em mong muốn được thực tập tại các doanh nghiệp
+            để tích lũy kinh nghiệm thực tế, hiểu rõ quy trình phân tích và
+            triển khai hệ thống. Về lâu dài, em định hướng trở thành Chuyên viên
+            phân tích nghiệp vụ trong lĩnh vực tài chính hoặc thương mại điện
+            tử, nơi có sự kết hợp mạnh mẽ giữa dữ liệu, chiến lược và con người.
           </p>
-          <button class="detail-btn" onclick="toggleDetail(this)">
-            Xem thêm
-          </button>
-          <div class="detail-content">
-            <p>
-              Mình có khả năng phân tích yêu cầu, thiết kế giải pháp và giao
-              tiếp hiệu quả với các bên liên quan. Mình luôn tìm kiếm cơ hội để
-              học hỏi và phát triển kỹ năng trong lĩnh vực này.
-            </p>
-          </div>
-        </div>
-        <img src="banner.jpeg" />
-      </div>
-      <div class="heading">
-        <a href="#" class="btn">View More</a>
-      </div>
-    </section>
-    <section class="contact-section">
-        <div class="contact-container" id ="contact">
-          <div class="contact-info">
-            <h3>Contact Info</h3>
-            <p><b>Address</b><br>XXX Ho Chi Minh<br>ZipCode 7000<br>Viet Nam</p>
-            <p><b>Phone</b><br>+8490xxxxx</p>
-            <p><b>Email</b><br>bichop@xxx.com</p>
-            <ul>
-                <li>
-                  <a href="https://github.com/bichhop1095" target="_blank">
-                    <i class="fab fa-github"></i> GitHub
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.facebook.com/bicshopw.05" target="_blank">
-                    <i class="fab fa-facebook"></i> Facebook
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.instagram.com/hcib_poh?fbclid" target="_blank">
-                    <i class="fab fa-instagram"></i> Instagram
-                  </a>
-                </li>
-              </ul>
-          </div>
-          <form class="contact-form">
-            <h3>Message Me</h3>
-            <input type="text" placeholder="Full Name" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-          </form>
-        </div>
-      </section>
-      <footer class="footer">
-        Copyrights By NGuyễn Thị Bích Hợp - 2025
-      </footer>
+        </section>
 
-    <!-- JS Scripts -->
-    <script>
-      window.addEventListener("scroll", function () {
-        var header = document.querySelector("header");
-        header.classList.toggle("sticky", window.scrollY > 0);
-      });
+        <section id="skills">
+          <h2>Kỹ năng và ngôn ngữ</h2>
+          <ul>
+            <li>Lập kế hoạch và quản lý thời gian</li>
+            <li>Sử dụng công cụ hỗ trợ mô hình hóa nghiệp vụ</li>
+            <li>Kỹ năng giao tiếp và làm việc nhóm</li>
+            <li>Tư duy phản biện và phân tích logic</li>
+            <li>Tiếng Việt: Giao tiếp rõ ràng và viết báo cáo</li>
+            <li>
+              Tiếng Anh: Đọc hiểu tài liệu chuyên ngành và giao tiếp cơ bản
+            </li>
+          </ul>
+        </section>
 
-      function toggleMenu() {
-        var menuToggle = document.querySelector(".toggle");
-        var menu = document.querySelector(".menu");
-        menuToggle.classList.toggle("active");
-        menu.classList.toggle("active");
-      }
+        <section id="hobbies">
+          <h2>Sở thích</h2>
+          <ul>
+            <li>Đọc sách</li>
+            <li>Tham gia các hoạt động thiện nguyện</li>
+            <li>Đạp xe đạp</li>
+            <li>Du lịch và khám phá văn hóa về đất nước mình</li>
+          </ul>
+        </section>
 
-      function toggleDetail(btn) {
-        const detail = btn.nextElementSibling;
-        const isVisible = detail.style.display === "block";
-        detail.style.display = isVisible ? "none" : "block";
-        btn.textContent = isVisible ? "Xem thêm" : "Thu gọn";
-      }
-      const sections = document.querySelectorAll("section");
-      window.addEventListener("scroll", () => {
-        const triggerBottom = window.innerHeight * 0.85;
-        sections.forEach((section) => {
-          const sectionTop = section.getBoundingClientRect().top;
-          if (sectionTop < triggerBottom) {
-            section.classList.add("show");
-          }
-        });
-      });
-    </script>
+        <section id="projects">
+          <h2>Dự án</h2>
+          <ul>
+            <li>
+              Đề xuất cải tiến quy trình đăng ký học phần. Tham gia nhóm học
+              thuật đề xuất giải pháp cải tiến hệ thống đăng ký tín chỉ. Em phụ
+              trách khảo sát sinh viên, phân tích trải nghiệm người dùng và đề
+              xuất các bước tối ưu hóa giao diện và thứ tự xử lý dữ liệu.
+            </li>
+          </ul>
+        </section>
+
+        <section id="certifications">
+          <h2>Chứng chỉ</h2>
+          <ul>
+            <li>TOEIC</li>
+            <li>Chứng chỉ Tin học MOS</li>
+          </ul>
+        </section>
+
+        <section id="awards">
+          <h2>Giải thưởng</h2>
+          <ul>
+            <li>Không có</li>
+          </ul>
+        </section>
+      </main>
+    </div>
   </body>
 </html>
