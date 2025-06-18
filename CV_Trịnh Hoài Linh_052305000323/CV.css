@@ -598,7 +598,7 @@ nav a:hover::after {
   border-color: #ffb6c1;
 }
 .contact {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 80px auto;
   padding: 40px;
   background: rgba(255, 255, 255, 0.05);
